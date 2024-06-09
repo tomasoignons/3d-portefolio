@@ -1,0 +1,93 @@
+.projects-page{
+    margin-top: 50px;
+    max-width: 1000px;
+    margin : auto;
+}
+
+.project-widgets-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 20px;
+    width : fit-content;
+    margin-bottom : 20px;
+    /* La ligne en-dessous est pour étirer les items, mais pas sûr du rendu donc fuck */
+    /* align-items: stretch; */
+}
+
+.project-widget-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height : 175px;
+    width : 320px;
+    padding : 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border : 2px solid black;
+    cursor: pointer;
+}
+
+.header-project-widget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+}
+
+.project-widget-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin : 0;
+}
+
+.project-widget-logo{
+    height : 1.5em;
+}
+
+.project-widget-description{
+    font-size: 1em;
+    margin : 0;
+}
+
+.footer-project-widget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+}
+
+.link-to-website-widget{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 1em;
+    padding : 5px 10px 5px 10px;
+    box-sizing: border-box;
+}
+
+.technolgies-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.technology-image{
+    border-radius: 10px;
+    border : 1px solid;
+    padding : 5px;
+    box-sizing: border-box;
+    height : 30px;
+    width : 30px;
+    overflow: hidden;
+    max-width: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.technology-image-img{
+    width : 100%;
+    object-fit: contain;
+}
