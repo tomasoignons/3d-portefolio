@@ -75,6 +75,7 @@ function DeepLearning() {
   const [nextImage, setNextImage] = useState(1)
   const [animate, setAnimate] = useState(false)
 
+
   useEffect(() => {
     let timeoutId;
   
@@ -93,6 +94,8 @@ function DeepLearning() {
   
     return () => clearTimeout(timeoutId); // clear the timeout when the component is unmounted
   }, [nextImage]);
+
+
 
 
   const [storyBox, setStoryBox] = useState(0)

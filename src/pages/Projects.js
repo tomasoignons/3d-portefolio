@@ -292,7 +292,7 @@ function Projects() {
 
 
   return (
-    <div className='projects-page'>
+    <div className='projects-page' id='project-page'>
         <h1>Projects</h1>
         <p>Here are some projects I have worked on:</p>
         <div className='project-widgets-container'>
@@ -309,7 +309,11 @@ function Projects() {
                 }}
                 onHoverStart={() => setHoverProjects(index)}
                 onHoverEnd={() => setHoverProjects(-1)}
-                onClick={() => navigate(project.goto)}
+                onClick={() => {
+                    navigate(project.goto)
+                    document.getElementById("project-page").scrollIntoView({behavior: "smooth"}) // je sais pas pq ça marche mais ça marche
+                    
+                }}
             >
                 <div className='header-project-widget'>
                     <h2 className='project-widget-title' style={{color : project.color}}>{project.title}</h2>

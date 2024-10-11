@@ -5,12 +5,11 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 
-import { MdRocketLaunch, MdDonutSmallh, MdAnimation, MdOutlineLightbulb, MdOutlineReportProblem  } from "react-icons/md";
-import { GrMoney, GrMultiple } from "react-icons/gr";
+import { MdOutlineLightbulb, MdOutlineReportProblem  } from "react-icons/md";
 import { AiOutlineStock } from "react-icons/ai";
-import { IoIosPaper, IoIosWarning } from "react-icons/io";
+import { IoIosPaper } from "react-icons/io";
 import { IoBookSharp, IoChevronDownOutline, IoHappyOutline, IoMailUnreadOutline } from "react-icons/io5";
-import { FaCalendarAlt, FaChrome, FaCrown, FaFlagCheckered, FaRegSadTear, FaRobot, FaRoute, FaRunning, FaSadTear, FaServer } from "react-icons/fa";
+import { FaCrown, FaFlagCheckered, FaRegSadTear, FaRobot, FaRoute, FaRunning, FaSadTear, FaServer } from "react-icons/fa";
 
 
 import 'react-vertical-timeline-component/style.min.css'; // import the styles
@@ -19,7 +18,6 @@ import { PiCloverBold } from 'react-icons/pi';
 import { TbBrandFiverr } from 'react-icons/tb';
 import { LuPartyPopper } from 'react-icons/lu';
 import { SiJavascript } from 'react-icons/si';
-import { CiMail } from 'react-icons/ci';
 
 function hexToRGBA(hex) {
   let r = parseInt(hex.slice(1, 3), 16),

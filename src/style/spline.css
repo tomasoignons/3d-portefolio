@@ -121,6 +121,7 @@
     box-sizing: border-box;
     border-radius: 100px;
     position : relative;
+    height : 50px;
 }
 
 .selector-element{
@@ -135,7 +136,7 @@
     position : absolute;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 100px;
-    height : 88%;
+    height : 80%;
     width : 33%;
     z-index: 0;
 }

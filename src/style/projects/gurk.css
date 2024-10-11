@@ -75,6 +75,7 @@
     margin: 0;
     font-size: 6em;
     color : #3783B5;
+    font-weight: bold;
 }
 
 .subtitle-gurk{
@@ -117,6 +118,8 @@
 .story-gurk-container2{
     max-width: 1000px;
 }
+
+
 
 .story-gurk-content{
     display: flex;
