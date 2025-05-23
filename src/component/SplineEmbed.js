@@ -50,6 +50,8 @@ export default function SplineEmbed() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [showing, setShowing] = useState(false)
 
+    console.log("hello")
+
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")

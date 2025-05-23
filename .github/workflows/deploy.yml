@@ -1,31 +1,18 @@
-name: Docker Build and Push
+name: Deploy Website on Push
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ] # Or your main branch
 
 jobs:
-  build-and-push:
+  trigger-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to GHCR with PAT
-        run: |
-          echo "${{ secrets.REPO_ACCESS_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+      - name: Send Webhook to Server
+        uses: fjogeleit/http-request-action@v1
         with:
-          context: .
-          push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          url: 'https://your_server_ip_or_domain:your_webhook_port/deploy-website' # Replace with your webhook URL
+          method: 'POST'
+          data: '{ "ref": "${{ github.ref }}", "before": "${{ github.before }}", "after": "${{ github.after }}", "repository": { "full_name": "${{ github.repository }}" } }'
+          header: 'Content-Type: application/json'
+          secret: 'YOUR_GITHUB_WEBHOOK_SECRET' # Ensure this matches your webhook listener config
