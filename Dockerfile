@@ -1,5 +1,5 @@
 FROM node:20.4.0-alpine
-ENV NODE_OPTIONS="--max-old-space-size=1024"
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
 WORKDIR /app
 
